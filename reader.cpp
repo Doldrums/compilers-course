@@ -1,35 +1,26 @@
 #include <regex>
-#include <iostream>
-#include <string>
 
-#include "types.cpp"
+#include "reader.h"
 
 using namespace std;
 
-class Reader {
-public:
-    Reader(std::vector<string>& tokens) : tokens_(tokens), index_(0) {}
+Reader::Reader(std::vector<string>& tokens) : tokens_(tokens), index_(0) {}
 
-    string next() {
-        if (index_ >= tokens_.size()) {
-            throw out_of_range("EOF while Reader::next()");
-        }
-
-        return tokens_[index_++];
+string Reader::next() {
+    if (index_ >= tokens_.size()) {
+        throw out_of_range("EOF while Reader::next()");
     }
 
-    string peek() {
-        if (index_ >= tokens_.size()) {
-            throw out_of_range("EOF while Reader::peek()");
-        }
+    return tokens_[index_++];
+}
 
-        return tokens_[index_];
+string Reader::peek() {
+    if (index_ >= tokens_.size()) {
+        throw out_of_range("EOF while Reader::peek()");
     }
 
-private:
-    vector<string>& tokens_;
-    size_t index_;
-};
+    return tokens_[index_];
+}
 
 
 vector<string> tokenize(string str) {
@@ -50,8 +41,6 @@ vector<string> tokenize(string str) {
 
     return matches;
 }
-
-Token* read_form(Reader& r);
 
 Token* read_list(Reader& r, char startSymbol, char endSymbol) {
     TokenList* list = new TokenList(startSymbol, endSymbol);

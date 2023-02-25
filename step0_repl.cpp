@@ -2,15 +2,11 @@
 #include <iostream>
 #include <memory>
 
-#include "types.h"
-#include "reader.h"
-#include "printer.h"
-
 using namespace std;
 
-Token* READ(const string& input);
-Token* EVAL(Token* ast);
-string PRINT(Token* ast);
+string READ(const string& input);
+string EVAL(const string& ast);
+string PRINT(const string& ast);
 string rep(const string& input);
 
 int main(int argc, char* argv[])
@@ -30,17 +26,17 @@ string rep(const string& input)
     return PRINT(EVAL(READ(input)));
 }
 
-Token* READ(const string& input)
+string READ(const string& input)
 {
-    return read_str(input);
+    return input;
 }
 
-Token* EVAL(Token* ast)
+string EVAL(const string& ast)
 {
     return ast;
 }
 
-string PRINT(Token* ast)
+string PRINT(const string& ast)
 {
-    return pr_str(ast, true);
+    return ast;
 }
