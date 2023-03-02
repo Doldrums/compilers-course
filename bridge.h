@@ -2,6 +2,7 @@
 
 #pragma once
 
+extern "C" __attribute__((visibility("default"))) __attribute__((used))
 enum C_TokenType {
     C_TokenType_List,
     C_TokenType_Symbol,
@@ -12,6 +13,7 @@ enum C_TokenType {
     C_TokenType_Nil
 };
 
+extern "C" __attribute__((visibility("default"))) __attribute__((used))
 struct C_Token {
     C_TokenType type;
     const char* value;
@@ -19,4 +21,5 @@ struct C_Token {
     size_t len;
 };
 
+extern "C" __attribute__((visibility("default"))) __attribute__((used))
 C_Token* c_read_str(char* string);
