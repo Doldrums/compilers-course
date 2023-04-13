@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:clojure_compiler_bridge/clojure_compiler_bridge.dart' as clojure_compiler_bridge;
+import 'package:clojure_compiler_bridge/clojure_compiler_bridge.dart'
+    as clojure_compiler_bridge;
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    sumResult = clojure_compiler_bridge.sum();
+    sumResult = clojure_compiler_bridge.evalLine();
     // sumAsyncResult = clojure_compiler_bridge.sumAsync(3, 4);
   }
 

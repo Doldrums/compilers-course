@@ -26,155 +26,45 @@ class ClojureCompilerBridgeBindings {
           lookup)
       : _lookup = lookup;
 
-  int join(
-    int arg0,
+  ffi.Pointer<ffi.Void> init_enviroment() {
+    return _init_enviroment();
+  }
+
+  late final _init_enviromentPtr =
+      _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Void> Function()>>(
+          'init_enviroment');
+  late final _init_enviroment =
+      _init_enviromentPtr.asFunction<ffi.Pointer<ffi.Void> Function()>();
+
+  ffi.Pointer<ffi.Char> parse_line(
+    ffi.Pointer<ffi.Char> line,
   ) {
-    return _join(
-      arg0,
+    return _parse_line(
+      line,
     );
   }
 
-  late final _joinPtr =
-      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int)>>('join');
-  late final _join = _joinPtr.asFunction<int Function(int)>();
+  late final _parse_linePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('parse_line');
+  late final _parse_line = _parse_linePtr
+      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
 
-  int replace_all(
-    int str,
-    int arg1,
+  ffi.Pointer<ffi.Char> eval_line(
+    ffi.Pointer<ffi.Char> line,
+    ffi.Pointer<ffi.Void> env,
   ) {
-    return _replace_all(
-      str,
-      arg1,
+    return _eval_line(
+      line,
+      env,
     );
   }
 
-  late final _replace_allPtr =
-      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Int, ffi.Int)>>(
-          'replace_all');
-  late final _replace_all =
-      _replace_allPtr.asFunction<int Function(int, int)>();
-
-  late final ffi.Pointer<ffi.Int> _namespace = _lookup<ffi.Int>('namespace');
-
-  int get namespace => _namespace.value;
-
-  set namespace(int value) => _namespace.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _Token = _lookup<ffi.Int32>('Token');
-
-  int get Token => _Token.value;
-
-  set Token(int value) => _Token.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _TokenList =
-      _lookup<ffi.Int32>('TokenList');
-
-  int get TokenList => _TokenList.value;
-
-  set TokenList(int value) => _TokenList.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _TokenSymbol =
-      _lookup<ffi.Int32>('TokenSymbol');
-
-  int get TokenSymbol => _TokenSymbol.value;
-
-  set TokenSymbol(int value) => _TokenSymbol.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _TokenString =
-      _lookup<ffi.Int32>('TokenString');
-
-  int get TokenString => _TokenString.value;
-
-  set TokenString(int value) => _TokenString.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _TokenNumber =
-      _lookup<ffi.Int32>('TokenNumber');
-
-  int get TokenNumber => _TokenNumber.value;
-
-  set TokenNumber(int value) => _TokenNumber.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _TokenNil = _lookup<ffi.Int32>('TokenNil');
-
-  int get TokenNil => _TokenNil.value;
-
-  set TokenNil(int value) => _TokenNil.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _TokenTrue =
-      _lookup<ffi.Int32>('TokenTrue');
-
-  int get TokenTrue => _TokenTrue.value;
-
-  set TokenTrue(int value) => _TokenTrue.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _TokenFalse =
-      _lookup<ffi.Int32>('TokenFalse');
-
-  int get TokenFalse => _TokenFalse.value;
-
-  set TokenFalse(int value) => _TokenFalse.value = value;
-
-  late final ffi.Pointer<ffi.Int32> _Reader = _lookup<ffi.Int32>('Reader');
-
-  int get Reader => _Reader.value;
-
-  set Reader(int value) => _Reader.value = value;
-
-  ffi.Pointer<ffi.Int> read_form(
-    int arg0,
-  ) {
-    return _read_form(
-      arg0,
-    );
-  }
-
-  late final _read_formPtr =
-      _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Int> Function(ffi.Int)>>(
-          'read_form');
-  late final _read_form =
-      _read_formPtr.asFunction<ffi.Pointer<ffi.Int> Function(int)>();
-
-  ffi.Pointer<ffi.Int> read_list(
-    int arg0,
-  ) {
-    return _read_list(
-      arg0,
-    );
-  }
-
-  late final _read_listPtr =
-      _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Int> Function(ffi.Int)>>(
-          'read_list');
-  late final _read_list =
-      _read_listPtr.asFunction<ffi.Pointer<ffi.Int> Function(int)>();
-
-  ffi.Pointer<ffi.Int> read_atom(
-    int arg0,
-  ) {
-    return _read_atom(
-      arg0,
-    );
-  }
-
-  late final _read_atomPtr =
-      _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Int> Function(ffi.Int)>>(
-          'read_atom');
-  late final _read_atom =
-      _read_atomPtr.asFunction<ffi.Pointer<ffi.Int> Function(int)>();
-
-  ffi.Pointer<ffi.Int> read_str(
-    int str,
-  ) {
-    return _read_str(
-      str,
-    );
-  }
-
-  late final _read_strPtr =
-      _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Int> Function(ffi.Int)>>(
-          'read_str');
-  late final _read_str =
-      _read_strPtr.asFunction<ffi.Pointer<ffi.Int> Function(int)>();
+  late final _eval_linePtr = _lookup<
+      ffi.NativeFunction<
+          ffi.Pointer<ffi.Char> Function(
+              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Void>)>>('eval_line');
+  late final _eval_line = _eval_linePtr.asFunction<
+      ffi.Pointer<ffi.Char> Function(
+          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Void>)>();
 }
-
-abstract class class1 {}

@@ -19,6 +19,8 @@ A new Flutter FFI plugin project.
   # `../src/*` so that the C sources can be shared among all target platforms.
   s.source           = { :path => '.' }
   s.source_files     = 'Classes/**/*'
+  s.compiler_flags = '-I/usr/local/include/'
+  s.vendored_libraries = 'Libraries/libprotobuf.dylib'
   s.dependency 'FlutterMacOS'
 
   s.platform = :osx, '10.11'

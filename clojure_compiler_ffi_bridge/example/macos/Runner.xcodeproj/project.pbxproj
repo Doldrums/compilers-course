@@ -21,16 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2DDBDFCE29B0C4C400FDBAE8 /* reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFBF29B0C4C300FDBAE8 /* reader.cpp */; };
-		2DDBDFCF29B0C4C400FDBAE8 /* bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC029B0C4C300FDBAE8 /* bridge.cpp */; };
-		2DDBDFD029B0C4C400FDBAE8 /* reader.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC129B0C4C300FDBAE8 /* reader.h */; };
-		2DDBDFD129B0C4C400FDBAE8 /* bridge.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC229B0C4C300FDBAE8 /* bridge.h */; };
-		2DDBDFD529B0C4C400FDBAE8 /* types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC629B0C4C300FDBAE8 /* types.cpp */; };
-		2DDBDFD629B0C4C400FDBAE8 /* printer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC729B0C4C400FDBAE8 /* printer.cpp */; };
-		2DDBDFD829B0C4C400FDBAE8 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC929B0C4C400FDBAE8 /* utils.cpp */; };
-		2DDBDFD929B0C4C400FDBAE8 /* types.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFCA29B0C4C400FDBAE8 /* types.h */; };
-		2DDBDFDA29B0C4C400FDBAE8 /* utils.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFCB29B0C4C400FDBAE8 /* utils.h */; };
-		2DDBDFDC29B0C4C400FDBAE8 /* printer.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFCD29B0C4C400FDBAE8 /* printer.h */; };
 		335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */; };
 		33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC10F02044A3C60003C045 /* AppDelegate.swift */; };
 		33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F22044A3C60003C045 /* Assets.xcassets */; };
@@ -223,7 +213,7 @@
 				33CC10EB2044A3C60003C045 /* Resources */,
 				33CC110E2044A8840003C045 /* Bundle Framework */,
 				3399D490228B24CF009A79C7 /* ShellScript */,
-				19DCA9921AD7DE77A2694D46 /* [CP] Embed Pods Frameworks */,
+				F48721DFAF3ADD609A44B749 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,23 +283,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19DCA9921AD7DE77A2694D46 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3399D490228B24CF009A79C7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -370,6 +343,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F48721DFAF3ADD609A44B749 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -377,16 +367,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DDBDFCE29B0C4C400FDBAE8 /* reader.cpp in Sources */,
-				2DDBDFCF29B0C4C400FDBAE8 /* bridge.cpp in Sources */,
-				2DDBDFD029B0C4C400FDBAE8 /* reader.h in Sources */,
-				2DDBDFD129B0C4C400FDBAE8 /* bridge.h in Sources */,
-				2DDBDFD529B0C4C400FDBAE8 /* types.cpp in Sources */,
-				2DDBDFD629B0C4C400FDBAE8 /* printer.cpp in Sources */,
-				2DDBDFD829B0C4C400FDBAE8 /* utils.cpp in Sources */,
-				2DDBDFD929B0C4C400FDBAE8 /* types.h in Sources */,
-				2DDBDFDA29B0C4C400FDBAE8 /* utils.h in Sources */,
-				2DDBDFDC29B0C4C400FDBAE8 /* printer.h in Sources */,
 				33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */,
 				33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */,
 				335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */,

@@ -9,11 +9,31 @@ final dylib = DynamicLibrary.process();
 final ClojureCompilerBridgeBindings _bindings =
     ClojureCompilerBridgeBindings(dylib);
 
-String sum() {
-  using((arena) {
-    return _bindings.c_read_str('test'.toCString(arena)).toString();
-    // print(res.toString());
-    // return res == ffi.nullptr ? null :res.toString();
+class Compiler {
+  Compiler() {
+    _env = _bindings.init_enviroment();
+  }
+
+  String evalLine(String line) {
+    return using((arena) {
+      return _bindings.eval_line(line.toCString(arena), _env).toDartString() ??
+          'Error :(';
+    });
+  }
+
+  parseLine(String line) {
+    final protobuf = using((arena) {
+      return _bindings.parse_line(line.toCString(arena));
+    });
+  }
+
+  late Pointer<Void> _env;
+}
+
+String evalLine(String line) {
+  return using((arena) {
+    final env = _bindings.init_enviroment();
+    final res = _bindings.eval_line(line.toCString(arena), env);
+    return res.toDartString() ?? 'Ничего не получилось';
   });
-  return 'ничиво не получилось';
 }
