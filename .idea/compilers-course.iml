@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/front_compiler/build" />
+      <excludeFolder url="file://$MODULE_DIR$/front_compiler/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/front_compiler/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/clojure_compiler_ffi_bridge/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/clojure_compiler_ffi_bridge/build" />
+      <excludeFolder url="file://$MODULE_DIR$/clojure_compiler_ffi_bridge/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/clojure_compiler_ffi_bridge/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/clojure_compiler_ffi_bridge/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/clojure_compiler_ffi_bridge/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/mal/impls/dart/build" />
+      <excludeFolder url="file://$MODULE_DIR$/mal/impls/dart/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/mal/impls/dart/.pub" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

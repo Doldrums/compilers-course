@@ -21,6 +21,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2DDBDFCE29B0C4C400FDBAE8 /* reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFBF29B0C4C300FDBAE8 /* reader.cpp */; };
+		2DDBDFCF29B0C4C400FDBAE8 /* bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC029B0C4C300FDBAE8 /* bridge.cpp */; };
+		2DDBDFD029B0C4C400FDBAE8 /* reader.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC129B0C4C300FDBAE8 /* reader.h */; };
+		2DDBDFD129B0C4C400FDBAE8 /* bridge.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC229B0C4C300FDBAE8 /* bridge.h */; };
+		2DDBDFD529B0C4C400FDBAE8 /* types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC629B0C4C300FDBAE8 /* types.cpp */; };
+		2DDBDFD629B0C4C400FDBAE8 /* printer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC729B0C4C400FDBAE8 /* printer.cpp */; };
+		2DDBDFD829B0C4C400FDBAE8 /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFC929B0C4C400FDBAE8 /* utils.cpp */; };
+		2DDBDFD929B0C4C400FDBAE8 /* types.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFCA29B0C4C400FDBAE8 /* types.h */; };
+		2DDBDFDA29B0C4C400FDBAE8 /* utils.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFCB29B0C4C400FDBAE8 /* utils.h */; };
+		2DDBDFDC29B0C4C400FDBAE8 /* printer.h in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDFCD29B0C4C400FDBAE8 /* printer.h */; };
 		335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */; };
 		33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC10F02044A3C60003C045 /* AppDelegate.swift */; };
 		33CC10F32044A3C60003C045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CC10F22044A3C60003C045 /* Assets.xcassets */; };
@@ -56,6 +66,21 @@
 		0BB4889A0CF7822616A6C2FA /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		108BD46B6F4456B4A5BB3C87 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF3B424F2829D40D9E2858E /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		2DDBDFBF29B0C4C300FDBAE8 /* reader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = reader.cpp; path = ../../../reader.cpp; sourceTree = "<group>"; };
+		2DDBDFC029B0C4C300FDBAE8 /* bridge.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = bridge.cpp; path = ../../../bridge.cpp; sourceTree = "<group>"; };
+		2DDBDFC129B0C4C300FDBAE8 /* reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = reader.h; path = ../../../reader.h; sourceTree = "<group>"; };
+		2DDBDFC229B0C4C300FDBAE8 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = ../../../bridge.h; sourceTree = "<group>"; };
+		2DDBDFC329B0C4C300FDBAE8 /* step1_read_print */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = step1_read_print; path = ../../../step1_read_print; sourceTree = "<group>"; };
+		2DDBDFC429B0C4C300FDBAE8 /* step0_repl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = step0_repl.cpp; path = ../../../step0_repl.cpp; sourceTree = "<group>"; };
+		2DDBDFC529B0C4C300FDBAE8 /* step1_read_print.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = step1_read_print.cpp; path = ../../../step1_read_print.cpp; sourceTree = "<group>"; };
+		2DDBDFC629B0C4C300FDBAE8 /* types.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = types.cpp; path = ../../../types.cpp; sourceTree = "<group>"; };
+		2DDBDFC729B0C4C400FDBAE8 /* printer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = printer.cpp; path = ../../../printer.cpp; sourceTree = "<group>"; };
+		2DDBDFC829B0C4C400FDBAE8 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = ../../../Makefile; sourceTree = "<group>"; };
+		2DDBDFC929B0C4C400FDBAE8 /* utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = utils.cpp; path = ../../../utils.cpp; sourceTree = "<group>"; };
+		2DDBDFCA29B0C4C400FDBAE8 /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = types.h; path = ../../../types.h; sourceTree = "<group>"; };
+		2DDBDFCB29B0C4C400FDBAE8 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = utils.h; path = ../../../utils.h; sourceTree = "<group>"; };
+		2DDBDFCC29B0C4C400FDBAE8 /* step0_repl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = step0_repl; path = ../../../step0_repl; sourceTree = "<group>"; };
+		2DDBDFCD29B0C4C400FDBAE8 /* printer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = printer.h; path = ../../../printer.h; sourceTree = "<group>"; };
 		333000ED22D3DE5D00554162 /* Warnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Warnings.xcconfig; sourceTree = "<group>"; };
 		335BBD1A22A9A15E00E9071D /* GeneratedPluginRegistrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedPluginRegistrant.swift; sourceTree = "<group>"; };
 		33CC10ED2044A3C60003C045 /* clojure_compiler_bridge_example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clojure_compiler_bridge_example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +126,21 @@
 		33CC10E42044A3C60003C045 = {
 			isa = PBXGroup;
 			children = (
+				2DDBDFC029B0C4C300FDBAE8 /* bridge.cpp */,
+				2DDBDFC229B0C4C300FDBAE8 /* bridge.h */,
+				2DDBDFC829B0C4C400FDBAE8 /* Makefile */,
+				2DDBDFC729B0C4C400FDBAE8 /* printer.cpp */,
+				2DDBDFCD29B0C4C400FDBAE8 /* printer.h */,
+				2DDBDFBF29B0C4C300FDBAE8 /* reader.cpp */,
+				2DDBDFC129B0C4C300FDBAE8 /* reader.h */,
+				2DDBDFCC29B0C4C400FDBAE8 /* step0_repl */,
+				2DDBDFC429B0C4C300FDBAE8 /* step0_repl.cpp */,
+				2DDBDFC329B0C4C300FDBAE8 /* step1_read_print */,
+				2DDBDFC529B0C4C300FDBAE8 /* step1_read_print.cpp */,
+				2DDBDFC629B0C4C300FDBAE8 /* types.cpp */,
+				2DDBDFCA29B0C4C400FDBAE8 /* types.h */,
+				2DDBDFC929B0C4C400FDBAE8 /* utils.cpp */,
+				2DDBDFCB29B0C4C400FDBAE8 /* utils.h */,
 				33FAB671232836740065AC1E /* Runner */,
 				33CEB47122A05771004F2AC0 /* Flutter */,
 				33CC10EE2044A3C60003C045 /* Products */,
@@ -159,7 +199,6 @@
 				A125F3F10E74FC0DAB6037B6 /* Pods-Runner.release.xcconfig */,
 				1DF3B424F2829D40D9E2858E /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,6 +377,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDBDFCE29B0C4C400FDBAE8 /* reader.cpp in Sources */,
+				2DDBDFCF29B0C4C400FDBAE8 /* bridge.cpp in Sources */,
+				2DDBDFD029B0C4C400FDBAE8 /* reader.h in Sources */,
+				2DDBDFD129B0C4C400FDBAE8 /* bridge.h in Sources */,
+				2DDBDFD529B0C4C400FDBAE8 /* types.cpp in Sources */,
+				2DDBDFD629B0C4C400FDBAE8 /* printer.cpp in Sources */,
+				2DDBDFD829B0C4C400FDBAE8 /* utils.cpp in Sources */,
+				2DDBDFD929B0C4C400FDBAE8 /* types.h in Sources */,
+				2DDBDFDA29B0C4C400FDBAE8 /* utils.h in Sources */,
+				2DDBDFDC29B0C4C400FDBAE8 /* printer.h in Sources */,
 				33CC11132044BFA00003C045 /* MainFlutterWindow.swift in Sources */,
 				33CC10F12044A3C60003C045 /* AppDelegate.swift in Sources */,
 				335BBD1B22A9A15E00E9071D /* GeneratedPluginRegistrant.swift in Sources */,
