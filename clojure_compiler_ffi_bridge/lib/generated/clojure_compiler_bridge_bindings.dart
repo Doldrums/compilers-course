@@ -36,19 +36,23 @@ class ClojureCompilerBridgeBindings {
   late final _init_enviroment =
       _init_enviromentPtr.asFunction<ffi.Pointer<ffi.Void> Function()>();
 
-  ffi.Pointer<ffi.Char> parse_line(
+  int parse_line(
+    ffi.Pointer<ffi.Pointer<ffi.UnsignedChar>> buff,
     ffi.Pointer<ffi.Char> line,
   ) {
     return _parse_line(
+      buff,
       line,
     );
   }
 
   late final _parse_linePtr = _lookup<
       ffi.NativeFunction<
-          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>>('parse_line');
-  late final _parse_line = _parse_linePtr
-      .asFunction<ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>)>();
+          ffi.Long Function(ffi.Pointer<ffi.Pointer<ffi.UnsignedChar>>,
+              ffi.Pointer<ffi.Char>)>>('parse_line');
+  late final _parse_line = _parse_linePtr.asFunction<
+      int Function(
+          ffi.Pointer<ffi.Pointer<ffi.UnsignedChar>>, ffi.Pointer<ffi.Char>)>();
 
   ffi.Pointer<ffi.Char> eval_line(
     ffi.Pointer<ffi.Char> line,

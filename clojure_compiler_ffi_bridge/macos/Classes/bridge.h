@@ -4,6 +4,6 @@
 
 EXPORT void *init_enviroment();
 
-EXPORT char *parse_line(char *line);
+EXPORT int parse_line(unsigned char **buff, char *line);
 
 EXPORT char *eval_line(char *line, void *env);

@@ -14,9 +14,9 @@ EXTERNAL SOURCES:
     :path: Flutter/ephemeral
 
 SPEC CHECKSUMS:
-  clojure_compiler_bridge: 9a82eb919f63cdf798efd2ab9914fbf96e396417
+  clojure_compiler_bridge: a0e37827e1505fc85378b996be7fbc6d5a07cecc
   FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
 
 PODFILE CHECKSUM: 353c8bcc5d5b0994e508d035b5431cfe18c1dea7
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

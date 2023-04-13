@@ -74,15 +74,6 @@ bridge::Token *convertToProto(Token *token)
     return tokenProto;
 }
 
-char *serialize_token(Token *token)
-{
-    bridge::Token *tokenProto = convertToProto(token);
-    string serializedToken = tokenProto->SerializeAsString();
-    char *serializedTokenCStr = new char[serializedToken.length() + 1];
-    strcpy(serializedTokenCStr, serializedToken.c_str());
-    return serializedTokenCStr;
-}
-
 #define EXPORT extern "C" __attribute__((visibility("default"))) __attribute__((used))
 
 EXPORT void *init_enviroment()
@@ -96,11 +87,21 @@ EXPORT void *init_enviroment()
     return env;
 }
 
-EXPORT char *parse_line(char *line)
+EXPORT int parse_line(unsigned char **buff, char *line)
 {
     string input(line);
     Token *token = READ(input);
-    return serialize_token(token);
+
+    bridge::Token *tokenProto = convertToProto(token);
+    long int len = tokenProto->ByteSizeLong();
+
+    *buff = (unsigned char *)malloc(len);
+    tokenProto->SerializeToArray(buff, len);
+
+    free(token);
+    free(tokenProto);
+
+    return len;
 }
 
 EXPORT char *eval_line(char *line, void *env)
@@ -112,5 +113,9 @@ EXPORT char *eval_line(char *line, void *env)
 
     char *resultCStr = new char[result.length() + 1];
     strcpy(resultCStr, result.c_str());
+
+    free(token);
+    free(evaluatedToken);
+
     return resultCStr;
 }

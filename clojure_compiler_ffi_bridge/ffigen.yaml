@@ -5,15 +5,12 @@ description: |
   Bindings for `src/clojure_compiler_bridge.h`.
 
   Regenerate bindings with `flutter pub run ffigen --config ffigen.yaml`.
-output: "lib/clojure_compiler_bridge_bindings_generated.dart"
-# compiler-opts:
-#   - '-I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1'
+output: "lib/generated/clojure_compiler_bridge_bindings.dart"
 llvm-path:
   - "/opt/homebrew/opt/llvm"
 headers:
   entry-points:
-    #    - 'src/clojure_compiler_bridge.h'
-    - "macos/bridge.h"
+    - "macos/Classes/bridge_gen.h"
 preamble: |
   // ignore_for_file: always_specify_types
   // ignore_for_file: camel_case_types
